@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="clock" >
+    <div id="circle"></div>
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+  </div>
+  <div id="now"></div>
+  <div id="universal">
+    <div id="paris">
+      <img src="./巴黎國旗.png" alt="巴黎">
+      <div id="clock-paris">
+        <div id="hour-paris"></div>
+        <div id="minute-paris"></div>
+        <div id="second-paris"></div>
+      </div>
+    </div>
+    <div id="NY">
+      <img src="./美國國旗.png" alt="紐約">
+      <div id="clock-NY">
+        <div id="hour-NY"></div>
+        <div id="minute-NY"></div>
+        <div id="second-NY"></div>
+      </div>
+    </div>
+    <div id="Au">
+      <img src="./澳歐國旗.png" alt="雪梨">
+        <div id="clock-Au">
+        <div id="hour-Au"></div>
+        <div id="minute-Au"></div>
+        <div id="second-Au"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const elHour = document.getElementById('hour')
+    const elMinute = document.getElementById('minute')
+    const elSecond = document.getElementById('second')
+    const now = document.getElementById('now')
+    const clock = document.getElementById('clock')
+    const circle = document.getElementById('circle')
+    //台灣時鐘
+    setInterval(() => {
+      const date = new Date()
+      elHour.style.transform = `rotate(${date.getHours()*30-90}deg)`
+      elMinute.style.transform = `rotate(${date.getMinutes()*6-90}deg)`
+      elSecond.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+      // circle.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+      // clock.style.boxShadow = `
+      // 0 0 5px rgba(0, 255, ${date.getSeconds()*5}, 1), 
+      // 0 0 25px rgba(0, 255, ${date.getSeconds()*5}, 0.8),
+      // 0 0 50px rgba(0, 255, ${date.getSeconds()*5}, 0.5)`
+    }, 1000)
+    
+    // let angleWidth = 2 / 60* Math.PI
+    // let seconds = new Date().getSeconds()
+
+    // for(let i=0; i<=60; i++){
+    //   let angleMid = i * angleWidth - 0.5 * Math.PI
+    //   let startAngle = angleMid - Math.PI/500
+    //   let endAngle = angleMid + Math.PI/500
+    // }
+
+
+
+
+    let date = new Date()
+    let month = date.getMonth()
+    let day = date.getDate()
+    let hour = date.getHours()
+    let minute = date.getMinutes()
+    let dayArr = [ "星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    now.innerHTML = `${month+1}月 ${day}日 ${hour}:${minute}分 ${dayArr[date.getDay()]}`
+
+    
+    //巴黎時鐘
+    const pHour = document.getElementById('hour-paris')
+    const pMinute = document.getElementById('minute-paris')
+    const pSecond = document.getElementById('second-paris')
+    
+    setInterval(() => {
+      const date = new Date()
+      pHour.style.transform = `rotate(${date.getHours()*30-270}deg)`
+      pMinute.style.transform = `rotate(${date.getMinutes()*6-90}deg)`
+      pSecond.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+    }, 1000)
+
+    //紐約時鐘
+    const NYHour = document.getElementById('hour-NY')
+    const NYMinute = document.getElementById('minute-NY')
+    const NYSecond = document.getElementById('second-NY')
+    
+    setInterval(() => {
+      const date = new Date()
+      NYHour.style.transform = `rotate(${date.getHours()*30-90}deg)`
+      NYMinute.style.transform = `rotate(${date.getMinutes()*6-90}deg)`
+      NYSecond.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+    }, 1000)
+
+    //雪梨時鐘
+    const AuHour = document.getElementById('hour-Au')
+    const AuMinute = document.getElementById('minute-Au')
+    const AuSecond = document.getElementById('second-Au')
+    
+    setInterval(() => {
+      const date = new Date()
+      AuHour.style.transform = `rotate(${date.getHours()*30-30}deg)`
+      AuMinute.style.transform = `rotate(${date.getMinutes()*6-90}deg)`
+      AuSecond.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+    }, 1000)
+
+
+  </script>
+</body>
+</html>

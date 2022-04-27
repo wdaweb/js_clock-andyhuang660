@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  background: gray;
+}
+#clock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(162, 245, 155);
+  position: relative;
+  margin: auto;
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+    /* translateX(150px) rotate(-0deg); */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* translateX(150px) rotate(-360deg); */
+  }
+}
+
+#circle{
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  border-bottom: 4px solid rgb(9, 118, 65);
+  box-shadow:
+  0 0 5px rgba(0, 255, 10, 1),
+  0 0 5px rgba(0, 255, 10, 0.8),
+  0 0 5px rgba(0, 255, 10, 0.5) ;
+  border-radius: 50%;
+  animation: animation 2s linear infinite;
+}
+#circle2{
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  border-bottom: 6px solid rgb(233, 25, 25);
+  box-shadow:
+  0 0 5px rgba(255, 0, 30, 1),
+  0 0 5px rgba(255, 0, 30, 0.8),
+  0 0 5px rgba(255, 0, 30, 0.5) ;
+  border-radius: 50%;
+  animation: animation2 2s linear infinite;
+}
+
+@keyframes animation2 {
+  0% {
+    transform: rotate(0deg);
+    /* translateX(150px) rotate(-0deg); */
+  }
+  100% {
+    transform: rotate(-360deg);
+    /* translateX(150px) rotate(-360deg); */
+  }
+}
+
+
+/* .animation{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(2, 111, 44);
+  box-shadow:
+  0 0 5px rgba(0, 255, 10, 1),
+  0 0 5px rgba(0, 255, 10, 0.8),
+  0 0 5px rgba(0, 255, 10, 0.5) ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  animation: animation 6s linear infinite;
+} */
+
+#hour{
+  width: 20%;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+#minute{
+  width: 40%;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+ 
+}
+#second{
+  width: 45%;
+  height: 10px;
+  background: rgb(212, 0, 255);
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+#now {
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+#universal {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/* 巴黎時鐘 */
+#clock-paris {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(144, 236, 249);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%,-50%); 
+}
+/* 法國國旗 */
+#paris img {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+/* 美國國旗 */
+#NY img {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  left: 48%;
+}
+
+/* 澳洲國旗 */
+#Au img {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  left: 78%;
+}
+
+#hour-paris{
+  width: 20%;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+#minute-paris{
+  width: 40%;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+
+}
+#second-paris{
+  width: 45%;
+  height: 10px;
+  background: rgb(212, 0, 255);
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+
+#clock-NY {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(174, 144, 249);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+}
+#hour-NY{
+  width: 20%;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+#minute-NY{
+  width: 40%;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+
+}
+#second-NY{
+  width: 45%;
+  height: 10px;
+  background: rgb(212, 0, 255);
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+
+#clock-Au {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(240, 246, 150);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(-10%,-50%); 
+}
+
+#hour-Au{
+  width: 20%;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
+#minute-Au{
+  width: 40%;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+
+}
+#second-Au{
+  width: 45%;
+  height: 10px;
+  background: rgb(212, 0, 255);
+  position: absolute;
+  top: calc(50% - 5%);
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  transform-origin: left center;
+}
