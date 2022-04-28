@@ -3,16 +3,25 @@
   padding: 0;
   list-style: none;
 }
-body{
-  background: gray;
+#galaxy{
+  background-image: url(https://p1-tt.byteimg.com/origin/pgc-image/d811b292900e4eb6aba38e46142aa812.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1300px;
+  height: 1300px;
+  position: relative;
+ 
 }
 #clock{
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: rgb(162, 245, 155);
+  background-color: rgb(188, 243, 249);
   position: relative;
   margin: auto;
+  position: absolute;
+  top: 500px;
+  left: 500px;
 }
 
 @keyframes animation {
@@ -33,13 +42,29 @@ body{
   border: 1px solid white;
   border-bottom: 4px solid rgb(9, 118, 65);
   box-shadow:
-  0 0 5px rgba(0, 255, 10, 1),
-  0 0 5px rgba(0, 255, 10, 0.8),
-  0 0 5px rgba(0, 255, 10, 0.5) ;
+  0 0 5px rgba(0, 200, 245, 1),
+  0 0 5px rgba(0, 200, 245, 0.8),
+  0 0 5px rgba(0, 200, 245, 0.5) ;
   border-radius: 50%;
   animation: animation 2s linear infinite;
+  background-image: url(https://cdn2.ettoday.net/images/5971/d5971758.jpg);
 }
-#circle2{
+.mercury img {
+  position: absolute;
+  left: 500px;
+  top: 50px;
+  transform-origin: -300px 150px;
+  animation: rotation 6s linear infinite;
+}
+
+@keyframes rotation{ 
+  100%
+  { 
+    transform: rotate(360deg); 
+  }
+}
+
+/* #circle2{
   width: 300px;
   height: 300px;
   border: 1px solid white;
@@ -50,7 +75,7 @@ body{
   0 0 5px rgba(255, 0, 30, 0.5) ;
   border-radius: 50%;
   animation: animation2 2s linear infinite;
-}
+} */
 
 @keyframes animation2 {
   0% {
